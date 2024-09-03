@@ -71,7 +71,7 @@ function submitForm() {
     formData.append('phone', document.getElementById('phone').value);
     formData.append('country', document.getElementById('country').value);
 
-    fetch('1kdXYEObBwunaYHpqXrQ4K0hPjmmSm_xhhZEDFcRBysAnxVbw7ZEYNF1a', {
+    fetch('AKfycbylGu2QiVEuZWpZIALB0fLBdvQ3CYvNVeIp8YZw3E_bR8BAHkZ311MLA3LvGq25jvS_5g', {
         method: 'POST',
         body: formData
     })
