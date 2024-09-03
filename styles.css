@@ -1,0 +1,121 @@
+/* تأثير التلاشي */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* التعديل على باقي أنماط CSS */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #f5a623; /* اللون الأصفر البرتقالي */
+    font-size: 1.5em;
+}
+
+.form-container input, .form-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color: #f5a623; /* اللون الأصفر البرتقالي */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.form-container button:hover {
+    background-color: #d49c0f; /* لون أغمق عند المرور */
+}
+
+.hidden {
+    display: none;
+}
+
+.progress-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 4px;
+    height: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background: #4caf50;
+    width: 0;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+}
+
+.copy-container {
+    margin-top: 20px;
+}
+
+.copy-container input {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+}
+
+.copy-container button {
+    width: 100%;
+    background-color: #007bff; /* لون أزرق مشابه لـ Vodafone */
+}
